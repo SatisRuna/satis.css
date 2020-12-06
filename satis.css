@@ -1,0 +1,491 @@
+/*====================================
+            全体の設定
+====================================*/
+    /*======================================
+                    背景を動かす
+    =======================================*/
+    body {
+        background:url("https://lh3.googleusercontent.com/fife/ABSRlIrKFML9ajnC6JDjIpczgIlUHlct1SnZDyKqUiwmBfXD7hV4HfCaxqfsUa4M7mI5_UuS7oeRj27L1O6tHy6I_eTnwAV2lf2ht7WkrTpy21udepCNYDiJKf_m4oP7g0ZdpoiPJGRbL4QGZdehOa5TqeOQRp-tQ7GMckzWh-d_8cuDM8CsQ0trLjAMcN7mzpj63YdGrJr7dlrMModyHuCd7HDnumz2kJFL1ePgFCn2UoBIVly9bTPNGnoEcry5LPuwHCNkCkMIIqaqHaFungKp5d_wXrifo1YdfwXs9VfGKkQ8VfhwCoIIuoOI8r8-QD20cg6COMMoKi1U2ap7DYSO8f7pS5754reIXnEAceFZKwwhm3RKH9BckqgB6vrSnOZY3V1Wd_rXD9xoEmqmzYh8BVyHioEUr1G3R6BDK9C2ucGnjVGV5DoHYhWRgYVbsaAnoEYBnMgkk8dyw5uy70EdFmOQM7ZNshr4tI1TjqhJnhO94S9LGdLX48pp8cf27JuqVn-v_e0xq6iyxysFB3UVrxgLsgtB4xeus3U4l8KmVA4af_p3CqKpitRdeGHlxj_oOl7s8Tcis2PNcdcbq2g8j9JJDMrrsMToRWdr_V8pc655HbQNph4ZzcDTWmO6DTi9bTFT5vZe79oo8Gei7K4hWMQAlLjHC0QcVTb6CnFCCB_GZzrXBF6bEIqGgxCpx6OSYuuUFUNl1_08bNIPlcIEfhevLKo=w1920-h899-ft");
+        animation: Loop 5s linear infinite;
+    }
+    @keyframes Loop {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -418px 0px;
+        }
+    }
+    /*======================================
+                スクロールバーを消す
+    =======================================*/
+    .selector::-webkit-scrollbar{
+        display:none;
+    }
+    .selector {
+        -ms-overflow-style:none;
+    }
+    ::-webkit-scrollbar-track {
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: none;
+        border: none;
+        border-radius: none;
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+/*====================================
+            トゥートの設定
+====================================*/
+    /*======================================
+    トゥートした人の画像を全て『サティス』にする
+    =======================================*/
+    .status__avatar {
+        width: 48px;
+        height: 48px;
+        background-size: 48px 48px;
+        background-image: url(https://lh3.googleusercontent.com/fife/ABSRlIqTkRn2e8OGCXb-CwAm5eaO1YmmrGqqL7qbGAMBYyPCsiAagWGYHKjj7_uNFUH7BPhZCC4Hc4JL6g91eWcX6zYt2HSLFg-ZQmK4ZsfTfVWmxLUWbmt7Vgda5EBAYWmAK2kr-ZW2nbLG9Uq9NWsn1f2Q1lZfb9TdwRQOAZl3m9X_337gsQ3VYNpnIBz3NUjRHpQJMmFUaKMRVBN2hKbbVDF-C3d22skbqueci5D1L5shTs6RRu3F-zLfD0srAFri91MaHlaSjDOASjTH_YX7SoRBPNr5bVp3qmHuNr2v3Z9I5bwcwkdpe9dfsWzgbKaqn1YZK4PtPlY1ZGLQcmwmwFekLG4_3By2c7gT4HErJGQ-ITMHAXGOFcrGwqMKQ-M6HVUNGk6XloEfyR36xlUk9YeKu-t-3C2k1w5MEfZGguGLuzaRCv9clsFYeDPP4ZbmXborDfto04GJG3_tkVspLPe9yinmJ27cZEXXSPU4kAa9DbRr8TsiDfF_aAU7OgzFQe-BjLkSXnSSl1MXIMZIH8yjLDACuN_c_QjMOK4fPRd-zbJQTy-vvq_kDE0kLpc3et50gOTRTFric_pv6PAHRO4rE5uhPNkompzPHo73xAKucsjwxQVCz2kbMmWvhb58hf2HBQxvL4DcPDID5FUJcCHoxy3p2F72bg-2UshjzCq-vaVyas_s6MIm8-2uDvlPHivX3TnMKrsw7jRmPgcXVST-QLA=w1920-h899-ft);
+    }
+    .status__avatar .account__avatar {
+        display: none;
+    }
+    /*======================================
+    トゥートした人の名前を全て『サティス』にする
+    =======================================*/
+    .display-name__html {
+        font-size:0;
+    }
+    .display-name__html:before {
+        font-size: 14px;
+        content:"サティス・エルフィール・ルナ";
+        color:  #0A151A;
+    }
+    /*======================================
+    トゥートした人のIDを全て@Satisにする
+    =======================================*/
+    .display-name__account {
+        font-size:0;
+    }
+    .display-name__account:before {
+        font-size: 14px;
+        content:"@Satis@fedibird.com";
+    }
+    /*====================================
+    Pタグで書かれた文字を全て『のじゃ』にする
+    ====================================*/
+    p {
+        font-size:0;
+        white-space: nowrap
+    }
+    p:before {
+        font-size: 14px;
+        content:"のじゃ！";
+    }
+    /*====================================
+        トゥートの改行禁止とマージン削除
+    ====================================*/
+    .quote-indicator__content p, .reply-indicator__content p, .status__content p {
+        margin-bottom: 0px;
+        white-space: nowrap
+    }
+    /*====================================
+            トゥートのリンクカード
+    ====================================*/
+    .status-card {
+        position: relative;
+        display: flex;
+        font-size: 14px;
+        border: 1px solid #393f4f;
+        border-radius: 4px;
+        color: #606984;
+        margin-top: 0px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    .status-card__title {
+        font-size:0;
+        white-space: nowrap
+    }
+    .status-card__title:before {
+        font-size: 14px;
+        content:"のじゃ！";
+    }
+    .status-card__host {
+        font-size:0;
+        white-space: nowrap
+    }
+    .status-card__host:before {
+        font-size: 14px;
+        content:"https://fedibird.com/@Satis";
+    }
+    .status-card__image-image {
+        background-image: none;
+        width: 0px;
+        height: 0px;
+    }
+    .status-card__image:before {
+        content:'';
+        width:60px;
+        height:67px;
+        background-image: url(https://lh3.googleusercontent.com/fife/ABSRlIqTkRn2e8OGCXb-CwAm5eaO1YmmrGqqL7qbGAMBYyPCsiAagWGYHKjj7_uNFUH7BPhZCC4Hc4JL6g91eWcX6zYt2HSLFg-ZQmK4ZsfTfVWmxLUWbmt7Vgda5EBAYWmAK2kr-ZW2nbLG9Uq9NWsn1f2Q1lZfb9TdwRQOAZl3m9X_337gsQ3VYNpnIBz3NUjRHpQJMmFUaKMRVBN2hKbbVDF-C3d22skbqueci5D1L5shTs6RRu3F-zLfD0srAFri91MaHlaSjDOASjTH_YX7SoRBPNr5bVp3qmHuNr2v3Z9I5bwcwkdpe9dfsWzgbKaqn1YZK4PtPlY1ZGLQcmwmwFekLG4_3By2c7gT4HErJGQ-ITMHAXGOFcrGwqMKQ-M6HVUNGk6XloEfyR36xlUk9YeKu-t-3C2k1w5MEfZGguGLuzaRCv9clsFYeDPP4ZbmXborDfto04GJG3_tkVspLPe9yinmJ27cZEXXSPU4kAa9DbRr8TsiDfF_aAU7OgzFQe-BjLkSXnSSl1MXIMZIH8yjLDACuN_c_QjMOK4fPRd-zbJQTy-vvq_kDE0kLpc3et50gOTRTFric_pv6PAHRO4rE5uhPNkompzPHo73xAKucsjwxQVCz2kbMmWvhb58hf2HBQxvL4DcPDID5FUJcCHoxy3p2F72bg-2UshjzCq-vaVyas_s6MIm8-2uDvlPHivX3TnMKrsw7jRmPgcXVST-QLA=w1920-h899-ft);
+        background-size: contain;
+        vertical-align: middle;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        ;
+    }
+    /*====================================
+            画像をサティスに変更
+    ====================================*/
+    .media-gallery__item-thumbnail img {
+        opacity: 0
+    }
+    .media-gallery__item-thumbnail:before {
+        width: 328px;
+        height: 145px;
+        content:'';
+        background: url(https://lh3.googleusercontent.com/fife/ABSRlIoEVyrtfuk706oJ77OmGsEwFdSR3RgEmhm-4zBninwspIdQSwtoHTz9alAjclbgSUym8Wrc2ZTKa-_QbeX5ssh7sjczGH2hzuP3mTLqQ0MkRbaA8KzadGJLiFAk444oecBXcJCTYOXBbBNcFilZ8BYARz7uYBc8g2vrgYD3Zr8d94sXSb0DKIfis7yT2TevcyJMyb4DNd_oatqzLgCSCjX-v3pPirOhetszzqLEJTiUDLYg6h2wSBMfbzCpe8OuOPo-E5CaY_kj72YxzW9J2PJFlDpxHZlA4gRgVhDzmFGdWW8JLT2trVKJ1hMGSM3VnOCfFxgkCtZiT7_WswiPV1FDhiVGH8WGo2NE7Im2MYjQWuaPOoXWKbiFhT86mCpfWRVWbGb1E2pQhprfDlNWSjmzCTFaVvm0Z87hhCTAJ1d8ACYjEK_fX29JdycHtcf9fSV3aKzLlJxDGlqiNL9qyiddaIv7g0WOq4gNmM-fk__zBEYDJrfqTkazBGRfLoXn3yn_dGZNqstQniWusWG_224KS5v39E9JYoCTs8Fs2WL-qpV6qkSgrrPFl0ZJS2zQuoO3_O4it7ves26o3nwYmWqqwRYoTldYLW2k8YOJyZ_qrvxpLNyqyzrfcKS8DmQZrzH8gSsbNLHfPxWhB5Lb7RhLQzMAg8nM6zi42GoNvhZSu-ZFAVy5wdoNO3hDMx9w_YgVMC-LQlBpc81NpDZkeWfjN-I=w1920-h899-ft) center center / cover no-repeat;
+        vertical-align: middle;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        ;
+    }
+    /*====================================
+            拡大画像をサティスに変更
+    ====================================*/
+    .zoomable-image img {
+        opacity: 0
+    }
+    .zoomable-image:before {
+        content:'';
+        width: 328px;
+        height: 145px;
+        background: url(https://lh3.googleusercontent.com/fife/ABSRlIoEVyrtfuk706oJ77OmGsEwFdSR3RgEmhm-4zBninwspIdQSwtoHTz9alAjclbgSUym8Wrc2ZTKa-_QbeX5ssh7sjczGH2hzuP3mTLqQ0MkRbaA8KzadGJLiFAk444oecBXcJCTYOXBbBNcFilZ8BYARz7uYBc8g2vrgYD3Zr8d94sXSb0DKIfis7yT2TevcyJMyb4DNd_oatqzLgCSCjX-v3pPirOhetszzqLEJTiUDLYg6h2wSBMfbzCpe8OuOPo-E5CaY_kj72YxzW9J2PJFlDpxHZlA4gRgVhDzmFGdWW8JLT2trVKJ1hMGSM3VnOCfFxgkCtZiT7_WswiPV1FDhiVGH8WGo2NE7Im2MYjQWuaPOoXWKbiFhT86mCpfWRVWbGb1E2pQhprfDlNWSjmzCTFaVvm0Z87hhCTAJ1d8ACYjEK_fX29JdycHtcf9fSV3aKzLlJxDGlqiNL9qyiddaIv7g0WOq4gNmM-fk__zBEYDJrfqTkazBGRfLoXn3yn_dGZNqstQniWusWG_224KS5v39E9JYoCTs8Fs2WL-qpV6qkSgrrPFl0ZJS2zQuoO3_O4it7ves26o3nwYmWqqwRYoTldYLW2k8YOJyZ_qrvxpLNyqyzrfcKS8DmQZrzH8gSsbNLHfPxWhB5Lb7RhLQzMAg8nM6zi42GoNvhZSu-ZFAVy5wdoNO3hDMx9w_YgVMC-LQlBpc81NpDZkeWfjN-I=w1920-h899-ft) center center / cover no-repeat;
+        vertical-align: middle;
+        position: absolute;
+        bottom: calc((100% - 145px)/2);
+        right: calc((100% - 328px)/2);
+        ;
+    }
+/*====================================
+            通知欄の設定
+====================================*/
+    /*======================================
+            アイコンを全てサティスにする。
+    =======================================*/
+    .account__avatar-overlay-base {
+        display: none;
+    }
+    .account__avatar-overlay-overlay {
+        background-image: none;
+        width: 0px;
+        height: 0px;
+    }
+    .account__avatar-overlay-overlay:before {
+        content:'';
+        width: 24px;
+        height: 24px;
+        background-size: 24px 24px;
+        background-image: url(https://lh3.googleusercontent.com/fife/ABSRlIqTkRn2e8OGCXb-CwAm5eaO1YmmrGqqL7qbGAMBYyPCsiAagWGYHKjj7_uNFUH7BPhZCC4Hc4JL6g91eWcX6zYt2HSLFg-ZQmK4ZsfTfVWmxLUWbmt7Vgda5EBAYWmAK2kr-ZW2nbLG9Uq9NWsn1f2Q1lZfb9TdwRQOAZl3m9X_337gsQ3VYNpnIBz3NUjRHpQJMmFUaKMRVBN2hKbbVDF-C3d22skbqueci5D1L5shTs6RRu3F-zLfD0srAFri91MaHlaSjDOASjTH_YX7SoRBPNr5bVp3qmHuNr2v3Z9I5bwcwkdpe9dfsWzgbKaqn1YZK4PtPlY1ZGLQcmwmwFekLG4_3By2c7gT4HErJGQ-ITMHAXGOFcrGwqMKQ-M6HVUNGk6XloEfyR36xlUk9YeKu-t-3C2k1w5MEfZGguGLuzaRCv9clsFYeDPP4ZbmXborDfto04GJG3_tkVspLPe9yinmJ27cZEXXSPU4kAa9DbRr8TsiDfF_aAU7OgzFQe-BjLkSXnSSl1MXIMZIH8yjLDACuN_c_QjMOK4fPRd-zbJQTy-vvq_kDE0kLpc3et50gOTRTFric_pv6PAHRO4rE5uhPNkompzPHo73xAKucsjwxQVCz2kbMmWvhb58hf2HBQxvL4DcPDID5FUJcCHoxy3p2F72bg-2UshjzCq-vaVyas_s6MIm8-2uDvlPHivX3TnMKrsw7jRmPgcXVST-QLA=w1920-h899-ft);
+        background-size: contain;
+        vertical-align: middle;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        ;
+    }
+    .account__avatar-wrapper .account__avatar {
+        background-image: none;
+        width: 0px;
+        height: 0px;
+    }
+    .account__avatar-wrapper .account__avatar:before {
+        content:'';
+        width:36px;
+        height:36px;
+        background-size:36px 36px;
+        background-image: url(https://lh3.googleusercontent.com/fife/ABSRlIqTkRn2e8OGCXb-CwAm5eaO1YmmrGqqL7qbGAMBYyPCsiAagWGYHKjj7_uNFUH7BPhZCC4Hc4JL6g91eWcX6zYt2HSLFg-ZQmK4ZsfTfVWmxLUWbmt7Vgda5EBAYWmAK2kr-ZW2nbLG9Uq9NWsn1f2Q1lZfb9TdwRQOAZl3m9X_337gsQ3VYNpnIBz3NUjRHpQJMmFUaKMRVBN2hKbbVDF-C3d22skbqueci5D1L5shTs6RRu3F-zLfD0srAFri91MaHlaSjDOASjTH_YX7SoRBPNr5bVp3qmHuNr2v3Z9I5bwcwkdpe9dfsWzgbKaqn1YZK4PtPlY1ZGLQcmwmwFekLG4_3By2c7gT4HErJGQ-ITMHAXGOFcrGwqMKQ-M6HVUNGk6XloEfyR36xlUk9YeKu-t-3C2k1w5MEfZGguGLuzaRCv9clsFYeDPP4ZbmXborDfto04GJG3_tkVspLPe9yinmJ27cZEXXSPU4kAa9DbRr8TsiDfF_aAU7OgzFQe-BjLkSXnSSl1MXIMZIH8yjLDACuN_c_QjMOK4fPRd-zbJQTy-vvq_kDE0kLpc3et50gOTRTFric_pv6PAHRO4rE5uhPNkompzPHo73xAKucsjwxQVCz2kbMmWvhb58hf2HBQxvL4DcPDID5FUJcCHoxy3p2F72bg-2UshjzCq-vaVyas_s6MIm8-2uDvlPHivX3TnMKrsw7jRmPgcXVST-QLA=w1920-h899-ft);
+        background-size: contain;
+        vertical-align: middle;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        ;
+    }
+    /*======================================
+            名前をサティスに変更
+    =======================================*/
+    .notification__display-name {
+        font-size: 0px;
+    }
+    .notification__display-name:before {
+        font-size: 14px;
+        content:"サティス・エルフィール・ルナ";
+    }
+/*====================================
+        アカウントページの設定
+====================================*/
+    /*======================================
+            ヘッダー画像の変更
+    =======================================*/
+    .account__header__image img {
+        opacity: 0
+    }
+    .account__header__image:before {
+        width: 328px;
+        height: 145px;
+        content:'';
+        background: url(https://lh3.googleusercontent.com/fife/ABSRlIoEVyrtfuk706oJ77OmGsEwFdSR3RgEmhm-4zBninwspIdQSwtoHTz9alAjclbgSUym8Wrc2ZTKa-_QbeX5ssh7sjczGH2hzuP3mTLqQ0MkRbaA8KzadGJLiFAk444oecBXcJCTYOXBbBNcFilZ8BYARz7uYBc8g2vrgYD3Zr8d94sXSb0DKIfis7yT2TevcyJMyb4DNd_oatqzLgCSCjX-v3pPirOhetszzqLEJTiUDLYg6h2wSBMfbzCpe8OuOPo-E5CaY_kj72YxzW9J2PJFlDpxHZlA4gRgVhDzmFGdWW8JLT2trVKJ1hMGSM3VnOCfFxgkCtZiT7_WswiPV1FDhiVGH8WGo2NE7Im2MYjQWuaPOoXWKbiFhT86mCpfWRVWbGb1E2pQhprfDlNWSjmzCTFaVvm0Z87hhCTAJ1d8ACYjEK_fX29JdycHtcf9fSV3aKzLlJxDGlqiNL9qyiddaIv7g0WOq4gNmM-fk__zBEYDJrfqTkazBGRfLoXn3yn_dGZNqstQniWusWG_224KS5v39E9JYoCTs8Fs2WL-qpV6qkSgrrPFl0ZJS2zQuoO3_O4it7ves26o3nwYmWqqwRYoTldYLW2k8YOJyZ_qrvxpLNyqyzrfcKS8DmQZrzH8gSsbNLHfPxWhB5Lb7RhLQzMAg8nM6zi42GoNvhZSu-ZFAVy5wdoNO3hDMx9w_YgVMC-LQlBpc81NpDZkeWfjN-I=w1920-h899-ft) center center / cover no-repeat;
+        vertical-align: middle;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        ;
+    }
+
+/*====================================
+        1カラムデザイン設定
+====================================*/
+    /*======================================
+            ヘッダーメニューの背景
+    =======================================*/
+    .drawer__header {
+        flex: 0 0 auto;
+        font-size: 16px;
+        background: #0CA4E4;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 6px;
+    }
+    /*======================================
+        ヘッダーメニューのアイコンの色
+    =======================================*/
+    .drawer__tab {
+        display: block;
+        flex: 1 1 auto;
+        padding: 15px 5px 13px;
+        color: #FFFFFF;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        border-bottom: 2px solid transparent;
+    }
+    /*======================================
+                検索欄の背景変更
+    =======================================*/
+    .search__input {
+        outline: 0;
+        box-sizing: border-box;
+        width: 100%;
+        border: 2px solid  #0CA4E4;
+        box-shadow: none;
+        font-family: inherit;
+        background:#FFFFFF;
+        color:  #0CA4E4;
+        font-size: 14px;
+        margin: 0;
+        display: block;
+        padding: 15px 30px 15px 15px;
+        line-height: 18px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+    .search__input:focus {
+        background:#FFFFFF;
+    }
+    .search__icon .fa {
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        z-index: 2;
+        display: inline-block;
+        opacity: 0;
+        transition: all .1s linear;
+        transition-property: transform,opacity;
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        color:  #0CA4E4;
+        cursor: default;
+        pointer-events: none;
+    }
+    .compose-form .compose-form__buttons-wrapper {
+        padding: 10px;
+        background: #71C1E3;
+        border-radius: 0 0 4px 4px;
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 auto;
+    }
+    .icon-button.inverted {
+        color: #FFFFFF;
+    }
+    .text-icon-button {
+        color:#FFFFFF;
+        border: 0;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0 3px;
+        line-height: 27px;
+        outline: 0;
+        transition: all .1s ease-in;
+        transition-property: background-color,color;
+    }
+    .character-counter__wrapper .character-counter{
+        color:#FFFFFF;
+    }
+    /*======================================
+    プロフィールとトゥートする欄の背景変更
+    =======================================*/
+    .navigation-bar {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: default;
+        color:#0CA4E4;
+        background: #FFFFFF;
+        border-radius: 6px 6px 0 0;
+        border: 2px solid  #0CA4E4;
+        border-bottom: none;
+    }
+    .navigation-bar__profile-edit{
+        color: #0CA4E4;
+    }
+    .compose-form {
+        padding: 10px;
+        border-radius: 0 0 6px 6px;
+        background: #FFFFFF;
+        border: 2px solid  #0CA4E4;
+        border-top: none;
+    }
+    .navigation-bar strong{
+        color: #0CA4E4;
+    }
+    .navigation-bar .permalink .account__avatar{
+        border-radius: 6px;
+    }
+
+
+    /*======================================
+                像さんをサティスに
+    =======================================*/
+    .drawer__inner__mastodon img {
+        opacity: 0
+    }
+    .drawer__inner__mastodon {
+        background: url(https://lh3.googleusercontent.com/fife/ABSRlIpqGYbykOursZXqaOuw6U6EM6cdDlKmGYCFn5xr7YukD9pTfEWi85fB_d_bYzViSPPQJya9aBTMbGiftibmTymfvRPY_yS0ssJjVW_jdeOBVKbK_3jklKj0C4kGho07UCe3tfWAAm3JZKEpYRWjr_-v9DTvKaLg-dwLWj1HExgw7WPjpP-V5StToUmVVBBtMtmZWxRPwEcPEfP5rbFtGCvEU9XJnGhMsxQRS1f9txDWmBQSCR8bIZTUuk47u905TLH3-4hFl7IrSk7_ToDvqnVGT6qExHV8hQyiO6VYIYR_gSsUXstHPHrYoTJPtvWGPo3Z2880-QsS1pC8lZ0YDJSXx_P7eUIs754dpmXG5_b2VOOKv-lScQiy3sXiejN59AGLz-QcQtot626uFWokC-lV5w8YMkctAJ6qlgpaovRylY0uNCAJHrI11TPGB1v39cKKn13cBAKGvoF9wLAaCI6soQBs9zHs0fw_HEGp6wiLq9CKKlKTRcxkSOoKiaS69Itjdmya8cHU92izJBxwdhSwexCaXPUnsmOKIeVkxI1I2G3wfLY88o9D_wPs_LMHFxaZp98gScnpPuWD8d42E7YLnDpSYqGPmiyKhsL5jseSn8fXhKdXDAOGfZvQ5ecYCaS1KJA0T6ZoWOT9rwZsj5gI4NByW5zxgKZR3pmhAAX-o3h4osPZeeF8Zhff181T5u2cNGyDlRa19jk8AZahPGRyXYA=w1920-h973-ft) no-repeat top/100% auto;
+        flex: 1;
+        min-height: 60px;
+        padding-top: 20px;
+        animation: img_box_9955 3s linear infinite;
+        transform-origin: 50% 50%;
+        margin: 0 !important;
+    }
+    .drawer__inner{
+        background: transparent;
+    }
+    @keyframes img_box_9955 {
+        0% { transform: translateY(20px) }
+        50% { transform: translateY(0px) }
+        100% { transform: translateY(20px) }
+    }
+
+
+    .column .column-header__wrapper .column-header{
+        background: #0CA4E4;
+        border-radius : 6px
+    }
+    .column-header__button{
+        background: #0CA4E4;
+        border-radius : 0 6px 0 0
+    }
+    .column-header__button .fa-sliders{
+        color: #FFFFFF;
+    }
+
+    .column>.scrollable {
+        background: transparent;
+    }
+    .status {
+        padding: 14px 10px 8px 68px;
+        position: relative;
+        min-height: 54px;
+        border-bottom: none;
+        cursor: auto;
+        opacity: 1;
+        -webkit-animation: fade .15s linear;
+        animation: fade .15s linear;
+        background: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #0A151A;
+        border: 2px solid  #0CA4E4;
+        border-radius : 6px
+    }
+    .quote-indicator__content, .reply-indicator__content, .status__content {
+        position: relative;
+        font-size: 15px;
+        line-height: 20px;
+        word-wrap: break-word;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 2px;
+        color: #0A151A;
+    }
+    .notification__message {
+        min-width: 120px;
+        max-width: 100%;
+        display: inline-block;
+        color: #FFFFFF;
+        cursor: default;
+        font-size: 15px;
+        line-height: 22px;
+        position: relative;
+        margin: 1.5em 0;
+        padding: 7px 10px;
+        background:#0CA4E4;
+        border: 2px solid  #0CA4E4;
+    }
+    .notification__message:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-top: 15px solid #0CA4E4;
+    }
+    .notification__favourite-icon-wrapper {
+        left: 20px;
+        position: absolute;
+    }
+    .column, .drawer {
+        flex: 0 0 auto;
+        padding: 10px 5px 0px;
+    }
+    .drawer__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        overflow-y: hidden;
+        width: 100%;
+        height: 100%;
+    }
